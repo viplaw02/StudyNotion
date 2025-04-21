@@ -37,6 +37,8 @@ exports.signup = async (req, res) => {
         message: "All Fields are required",
       })
     }
+    console.log(firstName,lastName,email,password,confirmPassword,accountType,otp);
+    
     // Check if password and confirm password match
     if (password !== confirmPassword) {
       return res.status(400).json({
